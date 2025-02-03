@@ -1,0 +1,8 @@
+view
+db/*
+auth/*
+!db/index.js
+!.gitkeep
+temp
+node_modules
+package-lock.json

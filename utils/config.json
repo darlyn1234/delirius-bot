@@ -1,0 +1,28 @@
+{
+  "owner": ["5217778573223@s.whatsapp.net"],
+  "autoPost": false,
+  "autoRead": false,
+  "composing": false,
+  "session_id": "50524527805%3ADP2Oi8mjkpj1wg%3A1",
+  "removeBG": "",
+  "musixMatch": "",
+  "stickerMetadata": {
+    "packauthor": "୨     ( 🥢 )       ⃘𓏸     D𝗲l𝗂𝗋𝗂uઽ.     ⃘𓏸",
+    "packname": "神志不清"
+  },
+  "BASE_URL": "https://delirius-apiofc.vercel.app",
+  "MSG": {
+    "botNotAdmin": "this command can be used if bot is become to group admin",
+    "notGroupAdmin": "this command only for group admins",
+    "mentionedOrQuotedJid": "reply a message or mention user",
+    "groupMsg": "only group",
+    "owner": "this command only for owner"
+  },
+  "SESSION_NAME": "auth/main",
+  "BOT_CONFIG": {
+    "BOT_NAME": "Graph",
+    "CREATOR_NAME": "Sarethxxx",
+    "MONEY_SYMBOL": "$",
+    "MONEY_NAME": "GraphCoins"
+  }
+}
