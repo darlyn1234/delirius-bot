@@ -2,8 +2,8 @@ const {default: axios } = require("axios");
 const { BASE_URL } = require("../../../utils/config.json");
 
 module.exports = {
-  tags: ["download"],
-  args: ["query"],
+  tags: ["download", "search"],
+  args: ["query/url"],
   cmd: ["pixiv"],
   help: ["pixiv"],
   exec: async (m, Delirius, { prefix, args, flags, cmd, body, url }) => {

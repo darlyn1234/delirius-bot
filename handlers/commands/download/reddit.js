@@ -3,8 +3,8 @@ const { default: axios } = require("axios");
 const { ConvertMiles } = require("../../../utils/index")
 
 module.exports = {
-  tags: ["download"],
-  args: ["url"],
+  tags: ["download", "search"],
+  args: ["query/url"],
   cmd: ["reddit", "redditdl"],
   help: ["reddit"],
   exec: async (m, Darlyn, { prefix, cmd, args }) => {
