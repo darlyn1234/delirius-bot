@@ -2,7 +2,7 @@ const {default: axios } = require("axios");
 const { BASE_URL } = require("../../../utils/config.json");
 
 module.exports = {
-  tags: ["tools"],
+  tags: ["download"],
   args: ["query"],
   cmd: ["pixiv"],
   help: ["pixiv"],

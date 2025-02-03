@@ -3,7 +3,7 @@ const { groupManage } = require('../../../db')
 module.exports = {
   cmd: ['mute', 'mutear_bot'],
   help: ['mute'],
-  tags: ['grupos'],
+  tags: ['groups'],
   group: true,
   botAdmin: false,
   admin: true,
