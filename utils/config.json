@@ -25,5 +25,5 @@
     "MONEY_SYMBOL": "$",
     "MONEY_NAME": "GraphCoins"
   },
-  "onlyowner": true
+  "onlyowner": false
 }
