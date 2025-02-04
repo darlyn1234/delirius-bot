@@ -1,3 +1,0 @@
-# Delirius Bot Base
-
-
