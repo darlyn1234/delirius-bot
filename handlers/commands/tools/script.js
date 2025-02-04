@@ -27,7 +27,7 @@ module.exports = {
 *Sha ∙* ${extractdata.sha}
 *Repo Commit∙* ${html_url}
 *Mensaje ∙* ${message}
-*Enlace ∙* ${extractdata.author.html_url}\n
+*Enlace ∙* ${extractdata.author.html_url}/delirius-bot\n
 *🚩 Powered By Delirius (神志不清)*`;
         Darlyn.sendMessage(
           m.chat,
