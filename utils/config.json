@@ -24,5 +24,6 @@
     "CREATOR_NAME": "Sarethxxx",
     "MONEY_SYMBOL": "$",
     "MONEY_NAME": "GraphCoins"
-  }
+  },
+  "onlyowner": true
 }
