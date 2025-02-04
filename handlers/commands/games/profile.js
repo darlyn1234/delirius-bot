@@ -23,9 +23,10 @@ module.exports = {
         ? await await Darlyn.fetchBlocklist()
         : [];
     const blocked = blockList.includes(who) ? true : false;
+    const nameee = await Darlyn.getName(who);
     let messageProfile = `	╭  ✦ User Profile ✦  ╮
 
- *◦ Nombre :* ${userr.name || "-"}
+ *◦ Nombre :* ${nameee || "-"}
  *◦ Numero :* ${rflag.data.result.number || "-"}
  *◦ Pais :* ${rflag.data.result.name} ${rflag.data.result.emoji}
  *◦ Nivel :* ${ConvertMiles(userr.level) || 0}
