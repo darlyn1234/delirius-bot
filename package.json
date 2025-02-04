@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/darlyn1234/darlyn1234"
+    "url": "git+https://github.com/darlyn1234/delirius-bot"
   },
   "author": "Darlingg",
   "bugs": {
-    "url": "https://github.com/darlyn1234/darlyn1234/issues"
+    "url": "https://github.com/darlyn1234/delirius-bot/issues"
   },
-  "homepage": "https://github.com/darlyn1234/darlyn1234#readme",
+  "homepage": "https://github.com/darlyn1234/delirius-bot#readme",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
     "@whiskeysockets/baileys": "^6.7.12",
