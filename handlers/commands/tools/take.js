@@ -2,7 +2,7 @@ const { Sticker } = require("../../../utils/sticker")
 const { statistics } = require("../../../db")
 
 module.exports = {
-  tags: ['media'],
+  tags: ['sticker'],
   args: ['reply sticker'],
   cmd: ['take'],
   help: ['take'],

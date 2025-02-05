@@ -3,7 +3,7 @@ let { statistics } = require("../../../db");
 let packMessage = require("../../../utils/config.json");
 
 module.exports = {
-  tags: ["tools"],
+  tags: ["sticker"],
   flags: ["style"],
   args: ["emoji"],
   cmd: ["emo", "emoji"],

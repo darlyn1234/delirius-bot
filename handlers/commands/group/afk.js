@@ -1,7 +1,7 @@
 const { AFK } = require("../../../db")
 
 module.exports = {
-    tags: ['grupos'],
+    tags: ['groups'],
     cmd: ['afk'],
     help: ['afk'],
     group: true,

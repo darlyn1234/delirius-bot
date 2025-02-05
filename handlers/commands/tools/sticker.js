@@ -5,7 +5,7 @@ let { statistics } = require('../../../db')
 let packMessage = require('../../../utils/config.json')
 
 module.exports = {
-  tags: ['media'],
+  tags: ['sticker'],
   flags: ['args'],
   args: ['send/reply media'],
   cmd: ['sticker', 's', 'stiker'],

@@ -5,7 +5,7 @@ const { default: axios } = require("axios");
 let packMessage = require("../../../utils/config.json");
 
 module.exports = {
-  tags: ["media"],
+  tags: ["sticker"],
   args: ["text"],
   cmd: ["ttp", "stext"],
   help: ["ttp"],
