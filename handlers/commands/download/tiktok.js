@@ -10,7 +10,7 @@ module.exports = {
   args: ["url"],
   cmd: ["tiktok", "tt", "tiktokdl"],
   help: ["tiktok"],
-  exec: async (m, Darlyn, { prefix, cmd, args }) => {
+  exec: async (m, Darlyn, { args }) => {
     const text = args.join(" ");
     if (!text) return m.reply("*∙ Ingresa un enlace de TikTok.*");
     try {

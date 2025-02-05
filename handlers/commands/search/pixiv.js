@@ -2,11 +2,11 @@ const {default: axios } = require("axios");
 const { BASE_URL } = require("../../../utils/config.json");
 
 module.exports = {
-  tags: ["download", "search"],
-  args: ["query/url"],
+  tags: ["search"],
+  args: ["query"],
   cmd: ["pixiv"],
   help: ["pixiv"],
-  exec: async (m, Delirius, { prefix, args, flags, cmd, body, url }) => {
+  exec: async (m, Delirius, { prefix, args, cmd }) => {
     try {
       if (args.length < 1)
         return m.reply(`*🚩 Ejemplo :* ${prefix + cmd} Lisa`);

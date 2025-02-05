@@ -7,7 +7,7 @@ module.exports = {
   args: ["query/url"],
   cmd: ["reddit", "redditdl"],
   help: ["reddit"],
-  exec: async (m, Darlyn, { prefix, cmd, args }) => {
+  exec: async (m, Darlyn, { args }) => {
     const text = args.join(' ');
   if (!text) return m.reply("*Ingresa un enlace o lo que buscas en Reddit.*");
   const isUrlRedditxd = text.startsWith("http://") || text.startsWith("https://");
