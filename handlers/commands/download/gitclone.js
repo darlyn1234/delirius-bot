@@ -46,7 +46,7 @@ module.exports = {
         {
           document: { url: gitclone.data.download },
           mimetype: "application/zip",
-          fileName: gitclone.name + ".zip",
+          fileName: gitclone.data.name + ".zip",
         },
         { quoted: rq },
       );
