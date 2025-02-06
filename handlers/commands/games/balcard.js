@@ -17,14 +17,13 @@ module.exports = {
         : m.sender;
     const user_info = await Users.get(who);
     const group_db = await groupManage.get(m.chat);
+    const nameee = await Darlyn.getName(who);
     if (!m.isGroup) return m.reply(MSG.groupMsg);
     if (m.isGroup && !group_db.games)
       return m.reply("*🚩 Los minijuegos ha sido desactivado en este grupo.*");
     if (!user_info)
       return m.reply(
-        "*🚩 " +
-          (await Darlyn.getName(who)) +
-          " no esta registrado en mi base de datos.*",
+        "*🚩 " + nameee + " no esta registrado en mi base de datos.*",
       );
     const bgs = await pickRandom([
       "https://i.pinimg.com/564x/99/14/8a/99148a1317f970d07c71525dc6b20967.jpg",
@@ -41,7 +40,7 @@ module.exports = {
       params: {
         url: profile_canvas,
         background: bgs,
-        username: pushname,
+        username: nameee,
         discriminator: num4,
         money: user_info.balance ? user_info.balance : 0,
         xp: user_info.xp ? user_info.xp : 0,
