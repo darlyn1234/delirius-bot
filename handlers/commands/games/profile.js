@@ -26,7 +26,7 @@ module.exports = {
     const nameee = await Darlyn.getName(who);
     let messageProfile = `	╭  ✦ User Profile ✦  ╮
 
- *◦ Nombre :* ${nameee || "-"}
+ *◦ Nombre :* ${userr.name || rflag.data.result.number || "-"}
  *◦ Numero :* ${rflag.data.result.number || "-"}
  *◦ Pais :* ${rflag.data.result.name} ${rflag.data.result.emoji}
  *◦ Nivel :* ${ConvertMiles(userr.level) || 0}
