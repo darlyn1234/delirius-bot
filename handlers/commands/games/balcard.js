@@ -7,6 +7,9 @@ module.exports = {
   cmd: ["balcard", "balancecard"],
   help: ["balcard"],
   exec: async (m, Darlyn, { args }) => {
+    function pickRandom(list) {
+      return list[Math.floor(list.length * Math.random())];
+    }
     const who = m.quoted
       ? m.quoted.sender
       : m.mentionedJid && m.mentionedJid[0]
