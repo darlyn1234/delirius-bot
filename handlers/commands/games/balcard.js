@@ -31,7 +31,7 @@ module.exports = {
       "https://i.pinimg.com/564x/71/14/df/7114dfda3200511c7cf5bb61b516af68.jpg",
     ]);
     const profile_canvas = await Darlyn.profilePictureUrl(
-      m.sender,
+      who,
       "image",
     ).catch((_) => "https://telegra.ph/file/24fa902ead26340f3df2c.png");
     const str = (who.split("@")[0] || "313481219").toString();
