@@ -26,10 +26,10 @@
   },
   "SESSION_NAME": "auth/main",
   "BOT_CONFIG": {
-    "BOT_NAME": "Graph",
+    "BOT_NAME": "Delirius",
     "CREATOR_NAME": "Sarethxxx",
     "MONEY_SYMBOL": "$",
-    "MONEY_NAME": "GraphCoins"
+    "MONEY_NAME": "DeliCoins"
   },
   "onlyowner": false
 }
