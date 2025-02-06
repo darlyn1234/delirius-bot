@@ -14,14 +14,16 @@ module.exports = {
     if (!group_db)
       return m.reply("*🚩 Este grupo no esta registrado en mi base de datos.*");
     const group_info = await Darlyn.groupMetadata(m.chat).catch((x) => null);
+    const group_members = group_info?.participants || []
+    const admins = group_members.filter((v) => v.admin).map((v) => v.id)
     const perfilx = await Darlyn.profilePictureUrl(m.chat, "image").catch(
       (_) => "https://telegra.ph/file/9b1353deceded7f387713.jpg",
     );
     let ingfogp = `*—  G R O U P - I N F O*\n
   ◦  *Nombre* : ${group_info.subject}
   ◦  *Id* : ${m.chat}
-  ◦  *Participantes* : ${participants.length}
-  ◦  *Admin* : ${groupAdmins.length}
+  ◦  *Participantes* : ${group_info.participants.length || 0}
+  ◦  *Admin* : ${admins.length}
   ◦  *Creado* : ${moment(group_info.creation * 1000)
     .tz("America/Lima")
     .locale("es")
