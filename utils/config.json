@@ -12,11 +12,17 @@
   },
   "BASE_URL": "https://delirius-apiofc.vercel.app",
   "MSG": {
-    "botNotAdmin": "this command can be used if bot is become to group admin",
-    "notGroupAdmin": "this command only for group admins",
-    "mentionedOrQuotedJid": "reply a message or mention user",
-    "groupMsg": "only group",
-    "owner": "this command only for owner"
+    "botNotAdmin": "*🚩 El bot necesita ser administrador.*",
+    "notGroupAdmin": "*🚩 Este comando es solo para administradores del grupo.*",
+    "mentionedOrQuotedJid": "*🚩Responde a un mensaje o menciona al usuario.*",
+    "groupMsg": "*🚩 Este comando solo puede ser usado en grupos.*",
+    "owner": "*🚩 Este comando solo puede ser usado por el creador.*",
+    "userBanned": "*🚩 Haz sido baneado del uso del bot.*",
+    "userPremium": "*🚩 Este comando solo puede ser usado por usuarios premium.*",
+    "notModerator": "*🚩 Este comando solo puede ser usado por moderadores del bot.*",
+    "banchatmsg": "*🚩 El bot esta baneado en este grupo.*",
+    "success": "*🚩 Ejecutado exitosamente.*",
+    "private": "*🚩 Comando solo para chat privado.*"
   },
   "SESSION_NAME": "auth/main",
   "BOT_CONFIG": {

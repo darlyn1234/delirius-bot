@@ -32,7 +32,7 @@ module.exports = {
         `*Hola, como estas?* @${m.sender.split("@")[0]} 🌵 ( *%pushname* )\n
 > › ᴅʙ : ꜱqʟɪᴛᴇ
 > › ᴄᴍᴅ ᴛᴏᴛᴀʟꜱ : ${Object.keys(plugins).length}
-> › ᴡᴇʙ : https://delirius-web.vercel.app
+> › ᴀᴘɪ : https://delirius-apiofc.vercel.app
 > › ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ : https://t.me/deliriuussBot
 > › ᴘᴀɪꜱ & ᴅᴇᴠɪᴄᴇ : ${flag.result.name} ${flag.result.emoji} (%device)
 
