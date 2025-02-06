@@ -18,8 +18,8 @@ module.exports = {
 *› Titulo :* ${__data.data.data.title || "-"}
 *› Likes :* ${__data.data.data.likes || 0}
 *› Publicado :* ${__data.data.data.upload || "-"}
-*› Peso :* ${__data.data.data.size ? "[ √ ]" : "[ × ]"}
-*› Nsfw :* ${__data.data.data.nsfw}
+*› Peso :* ${__data.data.data.size || "0kbps"}
+*› Nsfw :* ${__data.data.data.nsfw ? "[ √ ]" : "[ × ]"}
 *› Source :* ${__data.data.data.source || "-"}\n
 *🍟 Powered By Delirius.*`,
           },
