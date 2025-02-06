@@ -1,4 +1,5 @@
-const { getBuffer, gifToMp4, fetchData } = require("functionsss");
+const { getBuffer, gifToMp4 } = require("functionsss");
+const { default: axios } = require("axios");
 
 module.exports = {
   tags: ["tools"],
@@ -6,8 +7,8 @@ module.exports = {
   help: ["kiss"],
   exec: async (m, Darlyn) => {
     try {
-      const { link } = await fetchData("https://api.waifu.pics/sfw/kiss");
-      const result = await getBuffer(link);
+      const rrrrrrrxdd = (await axios.get("https://api.waifu.pics/sfw/kiss")).data;
+      const result = await getBuffer(rrrrrrrxdd.url);
       const buf = await gifToMp4(result);
       let who = null;
       if (m.mentionedJid && m.mentionedJid.length > 0) {
