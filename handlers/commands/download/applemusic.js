@@ -12,8 +12,8 @@ module.exports = {
       return m.reply(
         `*🚩 Ingresa un enlace o busqueda de Apple Music.*\n\n*Ejemplo ∙* ${prefix + cmd} https://music.apple.com/es/album/sola-remix-feat-daddy-yankee-wisin-farruko-zion-lennox/1183214926?i=1183215242\n\n*Ejemplo:* ${prefix + cmd} Feel Special`,
       );
-    const isUrlPinterest = /^(https?:\/\/)/.test(text);
-    if (isUrlPinterest) {
+    const isUrlAppleMusic = /^(https?:\/\/)/.test(text);
+    if (isUrlAppleMusic) {
       const songg_deliriuzzz_dltxt = await axios.get(
         BASE_URL + "/download/applemusicdl",
         {
