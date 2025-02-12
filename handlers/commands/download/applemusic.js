@@ -10,41 +10,41 @@ module.exports = {
     const text = args.join(" ");
     if (!text)
       return m.reply(
-        `*🚩 Ingresa un enlace o busqueda de Apple Music.*\n\n*Ejemplo ∙* ${prefix + cmd} https://pin.it/2Vflx5O\n\n*Ejemplo:* ${prefix + cmd} Feel Special`,
+        `*🚩 Ingresa un enlace o busqueda de Apple Music.*\n\n*Ejemplo ∙* ${prefix + cmd} https://music.apple.com/es/album/sola-remix-feat-daddy-yankee-wisin-farruko-zion-lennox/1183214926?i=1183215242\n\n*Ejemplo:* ${prefix + cmd} Feel Special`,
       );
     const isUrlPinterest = /^(https?:\/\/)/.test(text);
     if (isUrlPinterest) {
       const songg_deliriuzzz_dltxt = await axios.get(
-            BASE_URL + "/download/applemusicdl",
-            {
-              params: {
-                url: text,
-              },
-            },
-          );
-          let applemusic_searchhhxdd = `	╭  ✦ Apple Music Download ✦  ╮\n
+        BASE_URL + "/download/applemusicdl",
+        {
+          params: {
+            url: text,
+          },
+        },
+      );
+      let applemusic_searchhhxdd = `	╭  ✦ Apple Music Download ✦  ╮\n
  *◦ Titulo :* ${songg_deliriuzzz_dltxt.data.data.name || "-"}
  *◦ Artista :* ${songg_deliriuzzz_dltxt.data.data.artists || "-"}
  *◦ Duracion :* ${songg_deliriuzzz_dltxt.data.data.type || "-"}
  *◦ Duracion :* ${songg_deliriuzzz_dltxt.data.data.duration || "-"}
  *◦ Enlace :* ${text.trim()}\n
 > ʟɪɢʜᴛᴡᴇɪɢʜᴛ ᴡᴀʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ${BOT_CONFIG.CREATOR_NAME} ©`;
-          const rddeliriuszzz = await Darlyn.sendMessage(
-            m.chat,
-            {
-              image: { url: songg_deliriuzzz_dltxt.data.data.image },
-              caption: applemusic_searchhhxdd,
-            },
-            { quoted: m },
-          );
-          Darlyn.sendMessage(
-            m.chat,
-            {
-              audio: { url: songg_deliriuzzz_dltxt.data.data.download },
-              mimetype: "audio/mpeg",
-            },
-            { quoted: rddeliriuszzz },
-          );
+      const rddeliriuszzz = await Darlyn.sendMessage(
+        m.chat,
+        {
+          image: { url: songg_deliriuzzz_dltxt.data.data.image },
+          caption: applemusic_searchhhxdd,
+        },
+        { quoted: m },
+      );
+      Darlyn.sendMessage(
+        m.chat,
+        {
+          audio: { url: songg_deliriuzzz_dltxt.data.data.download },
+          mimetype: "audio/mpeg",
+        },
+        { quoted: rddeliriuszzz },
+      );
     } else {
       try {
         const ressss = await axios.get(BASE_URL + "/search/applemusic", {
