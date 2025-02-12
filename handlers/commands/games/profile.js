@@ -1,4 +1,4 @@
-const { BASE_URL } = require("../../../utils/config.json");
+const { BASE_URL, BOT_CONFIG } = require("../../../utils/config.json");
 const { Users } = require("../../../db");
 const { get } = require("axios");
 const { ConvertMiles } = require("../../../utils/index");
@@ -38,7 +38,7 @@ module.exports = {
  *◦ Bloqueado :* ${blocked ? "√" : "×"}
  *◦ Baneado :* ${userr.banned ? "√" : "×"}
  *◦ Warning :* ${userr.warning ? "√" : "×"}\n
-> ʟɪɢʜᴛᴡᴇɪɢʜᴛ ᴡᴀʙᴏᴛ ᴍᴀᴅᴇ ʙʏ sareth ©`;
+> ʟɪɢʜᴛᴡᴇɪɢʜᴛ ᴡᴀʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ${BOT_CONFIG.CREATOR_NAME} ©`;
     Darlyn.sendMessage(
       m.chat,
       { image: { url: perfil }, caption: messageProfile, mentions: [who] },

@@ -1,5 +1,5 @@
 const {default: axios } = require("axios");
-const { BASE_URL } = require("../../../utils/config.json");
+const { BASE_URL, BOT_CONFIG } = require("../../../utils/config.json");
 
 module.exports = {
   tags: ["search"],
@@ -26,7 +26,7 @@ module.exports = {
 *› Usuario :* ${responseeeeexdd.username}
 *› Enlace :* https://www.pixiv.net/en/artworks/${responseeeeexdd.id}
 *› Desc :* ${responseeeeexdd.description}\n
-> 🍟 Powered By Delirius`;
+> 🍟 Powered By ${BOT_CONFIG.BOT_NAME}`;
       Delirius.sendMessage(
         m.chat,
         {

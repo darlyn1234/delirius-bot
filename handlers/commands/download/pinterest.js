@@ -1,4 +1,4 @@
-const { BASE_URL } = require("../../../utils/config.json");
+const { BASE_URL, BOT_CONFIG } = require("../../../utils/config.json");
 const { default: axios } = require("axios");
 
 module.exports = {
@@ -27,7 +27,7 @@ module.exports = {
         `*› Seguidores :* ${rrrrrr.data.data.followers}\n` +
         `*› Publicado :* ${rrrrrr.data.data.upload}\n` +
         `*› Profile :* ${rrrrrr.data.data.author_url}\n` +
-        `*› Descripcion :* ${rrrrrr.data.data.description}\n\n*🍟 Powered By Delirius*`;
+        `*› Descripcion :* ${rrrrrr.data.data.description}\n\n*🍟 Powered By ${BOT_CONFIG.BOT_NAME}*`;
       Darlyn.sendFileFromUrl(
         m.chat,
         rrrrrr.data.data.download.url || rrrrrr.data.data.thumbnail,
@@ -53,7 +53,7 @@ module.exports = {
 *› Likes :* ${imggresss.likes}
 *› Creado :* ${imggresss.created_at}
 *› Url :* https://es.pinterest.com/${imggresss.username}\n
-*🍟 Powered By Delirius*`;
+*🍟 Powered By ${BOT_CONFIG.BOT_NAME}*`;
           Darlyn.sendMessage(
             m.chat,
             { image: { url: imggresss.image }, caption: txtPinterest },

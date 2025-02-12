@@ -1,4 +1,4 @@
-const { BASE_URL } = require("../../../utils/config.json");
+const { BASE_URL, BOT_CONFIG } = require("../../../utils/config.json");
 
 module.exports = {
   tags: ["tools"],

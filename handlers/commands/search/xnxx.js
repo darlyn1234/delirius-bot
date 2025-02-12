@@ -1,4 +1,4 @@
-const { BASE_URL } = require("../../../utils/config.json");
+const { BASE_URL, BOT_CONFIG } = require("../../../utils/config.json");
 const { default: axios } = require("axios");
 
 module.exports = {
@@ -35,7 +35,7 @@ module.exports = {
  *◦ Duracion :* ${rdvid.duration || ""}
  *◦ Porcentage :* ${rdvid.percentage || "0"}
  *◦ Calidad :* ${rdvid.quality || 0}\n
-> ʟɪɢʜᴛᴡᴇɪɢʜᴛ ᴡᴀʙᴏᴛ ᴍᴀᴅᴇ ʙʏ sareth ©`;
+> ʟɪɢʜᴛᴡᴇɪɢʜᴛ ᴡᴀʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ${BOT_CONFIG.CREATOR_NAME} ©`;
       Darlyn.sendMessage(
         m.chat,
         {

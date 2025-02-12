@@ -1,4 +1,4 @@
-const { BASE_URL } = require("../../../utils/config.json");
+const { BASE_URL, BOT_CONFIG } = require("../../../utils/config.json");
 const { default: axios } = require("axios");
 const { ConvertMiles } = require("../../../utils/index")
 
@@ -38,7 +38,7 @@ module.exports = {
             `*› Follows :* ${ConvertMiles(result.followed) || "-"}\n` +
             `*› Verificado :* ${result.is_verified ? "√" : "×"}\n` +
             `*› Private :* ${result.is_private ? "√" : "×"}\n` +
-            `*› Desc :* ${result.caption || "-"}\n\n*Powered By Delirius*`,
+            `\n*Powered By ${BOT_CONFIG.BOT_NAME}*`,
           m,
           "",
           "",
@@ -55,7 +55,7 @@ module.exports = {
             `*› Follows :* ${ConvertMiles(result.followed) || "-"}\n` +
             `*› Verificado :* ${result.is_verified ? "√" : "×"}\n` +
             `*› Private :* ${result.is_private ? "√" : "×"}\n` +
-            `*› Desc :* ${result.caption || "-"}\n\n*Powered By Delirius*`,
+            `\n*Powered By ${BOT_CONFIG.BOT_NAME}*`,
         );
         for (let i = 0; i < result.download.length; i++) {
           await Darlyn.sendFileFromUrl(

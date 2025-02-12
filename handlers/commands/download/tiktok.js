@@ -1,4 +1,4 @@
-const { BASE_URL } = require("../../../utils/config.json");
+const { BASE_URL, BOT_CONFIG } = require("../../../utils/config.json");
 const { default: axios } = require("axios");
 const { ConvertMiles } = require("../../../utils/index");
 const os = require("os");
@@ -31,7 +31,7 @@ module.exports = {
 *› Compartido :* ${ConvertMiles(rtiktokdl.data.share)}
 *› Comentario :* ${ConvertMiles(rtiktokdl.data.comment)}
 *› Descargas :* ${ConvertMiles(rtiktokdl.data.download)}
-*› Música :* ${rtiktokdl.data.music.title}\n\n> *❄️ Powered By Delirius (神志不清)*`;
+*› Música :* ${rtiktokdl.data.music.title}\n\n> *❄️ Powered By ${BOT_CONFIG.BOT_NAME}*`;
       if (rtiktokdl.data.meta.media[0].type === "video") {
         await Darlyn.sendMessage(
           m.chat,

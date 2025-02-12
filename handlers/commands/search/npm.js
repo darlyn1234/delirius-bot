@@ -1,5 +1,5 @@
 const { default: axios } = require("axios");
-const { BASE_URL } = require("../../../utils/config.json");
+const { BASE_URL, BOT_CONFIG } = require("../../../utils/config.json");
 
 module.exports = {
   tags: ["search"],
@@ -25,7 +25,7 @@ module.exports = {
         textNpm += `\n *◦ Versión:* ${pkg.version}`;
         textNpm += `\n *◦ Descripción:* ${pkg.description}`;
         textNpm += `\n *◦ Url:* ${pkg.url}`;
-        textNpm += `\n\n> ʟɪɢʜᴛᴡᴇɪɢʜᴛ ᴡᴀʙᴏᴛ ᴍᴀᴅᴇ ʙʏ sareth ©`;
+        textNpm += `\n\n> ʟɪɢʜᴛᴡᴇɪɢʜᴛ ᴡᴀʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ${BOT_CONFIG.CREATOR_NAME} ©`;
         await Delirius.sendMessage(
           m.chat,
           {
