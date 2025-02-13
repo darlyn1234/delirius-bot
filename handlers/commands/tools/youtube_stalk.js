@@ -12,12 +12,12 @@ module.exports = {
     axios
       .get(BASE_URL + "/tools/ytstalk", {
         params: {
-          channel: args.join(' '),
+          channel: args.join(" "),
         },
       })
       .then(async (res) => {
-        const result = res.data?.data;
-    let youtube_stalkk = `	*╭  ✦ Youtube Stalk ✦  ╮*\n
+        const result = res.data.data;
+        let youtube_stalkk = `	*╭  ✦ Youtube Stalk ✦  ╮*\n
  *◦ Username :* ${result.username}
  *◦ Suscriptores :* ${result.subscriber_count}
  *◦ Videos :* ${result.video_count}
@@ -31,8 +31,7 @@ module.exports = {
           m.chat,
           {
             image: {
-              url:
-                result.avatar,
+              url: result.avatar,
             },
             caption: youtube_stalkk,
           },

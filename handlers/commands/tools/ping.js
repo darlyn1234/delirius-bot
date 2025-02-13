@@ -1,7 +1,7 @@
-const { humanFileSize } = require("../../../utils")
-let config = require('../../../utils/config.json')
-const os = require('os');
-let { info } = require("../../../db");
+const { humanFileSize } = require("../../../utils");
+const config = require("../../../utils/config.json");
+const { info } = require("../../../db");
+const { get } = require("axios");
 
 const runtime = (seconds) => {
   seconds = Number(seconds);
@@ -17,29 +17,49 @@ const runtime = (seconds) => {
 };
 
 module.exports = {
-    tags: ['tools'],
-    cmd: ['ping', 'stat'],
-    help: ['ping'],
-    exec: async (m, client, { prefix }) => {
-        let { stats } = await info('stats');
-        now = new Date()
-        let text = `*–  B O T S T A T*\n
-* *${humanFileSize(stats.filesize, true) || "0kbps"} media enviada
-* *${stats.msgRecv || 0}* mensajes recibidos
-* *${stats.msgSent || 0}* mensajes enviados
-* *${stats.cmd || 0}* commands hit
-* *${stats.autodownload || 0}* autodescargas
-* *${stats.sticker || 0}* stickers creados
-› Runtime : ${runtime(process.uptime())}
-
-–  S Y S T E M
-
-* *${config.composing ? '[ √ ]' : '[ × ]'}* Autotyping
-* *${config.autoRead ? '[ √ ]' : '[ × ]'}* Autoread
-* *${config.autoPost ? '[ √ ]' : '[ × ]'}* Autopost
-*› Prefix :* (multi) (!./#-)
-
-> Powered By Delirius (神志不清)`;
-        client.sendMessage(m.chat, {image: {url: "https://i.postimg.cc/2yF3Q01L/zazaza.jpg"}, caption: text}, {quoted: m});
-    }
-}
+  tags: ["tools"],
+  cmd: ["ping", "stat"],
+  help: ["ping"],
+  exec: async (m, client, { prefix }) => {
+    let { stats } = await info("stats");
+    now = new Date();
+    let txt = `	╭  ✦ Bot Stats ✦  ╮\n
+ *◦ Media enviada :* ${humanFileSize(stats.filesize, true) || "0kbps"}
+ *◦ Msg recibidos :* ${stats.msgRecv || 0}
+ *◦ Msg enviados :* ${stats.msgSent || 0}
+ *◦ Commands hit :* ${stats.cmd || 0}
+ *◦ Autodescargas :* ${stats.autodownload || 0}
+ *◦ Stickers creados :* ${stats.sticker || 0}
+ *◦ Runtime :* ${runtime(process.uptime())}\n
+	╭  ✦ System Status ✦  ╮\n
+ *◦ Autotyping :* ${config.composing ? "[ √ ]" : "[ × ]"}
+ *◦ Autoread :* ${config.autoRead ? "[ √ ]" : "[ × ]"}
+ *◦ Autopost :* ${config.autoPost ? "[ √ ]" : "[ × ]"}\n
+> ʟɪɢʜᴛᴡᴇɪɢʜᴛ ᴡᴀʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ${config.BOT_CONFIG.CREATOR_NAME} ©`;
+    client.sendMessage(
+      m.chat,
+      {
+        text: txt,
+        linkPreview: false,
+        contextInfo: {
+          externalAdReply: {
+            title: config.BOT_CONFIG.BOT_NAME,
+            body: "Bot Stats",
+            thumbnail: (
+              await get("https://i.postimg.cc/2yF3Q01L/zazaza.jpg", {
+                responseType: "arraybuffer",
+              })
+            ).data,
+            mediaType: 1,
+            renderLargerThumbnail: true,
+            sourceUrl: "https://delirius-apiofc.vercel.app",
+            showAdAttribution: true,
+          },
+        },
+      },
+      {
+        quoted: m,
+      },
+    );
+  },
+};
