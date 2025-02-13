@@ -30,6 +30,11 @@ module.exports = {
           m.chat,
           {
             document: { url: pkg.download },
+            jpegThumbnail: await Delirius.reSizeImg(
+            "https://i.ibb.co/gzfhqnK/goDv44X.jpg",
+            250,
+            250,
+          ),
             fileName: pkg.package + ".tgz",
             caption: textNpm,
           },
