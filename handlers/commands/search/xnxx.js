@@ -6,6 +6,13 @@ module.exports = {
   args: ["query/url"],
   cmd: ["xnxx", "xnxxdl", "xnxxsearch"],
   help: ["xnxx"],
+  /**
+   *
+   * @param {*} m
+   * @param {import("@whiskeysockets/baileys").WASocket} Darlyn
+   * @param {*} param2
+   * @returns
+   */
   exec: async (m, Darlyn, { prefix, cmd, args }) => {
     try {
       if (args.length < 1) {
@@ -40,6 +47,11 @@ module.exports = {
         m.chat,
         {
           document: { url: dlllllll.download.high || dlllllll.download.low },
+          jpegThumbnail: await Darlyn.reSizeImg(
+            dlllllll.gallery.default || dlllllll.gallery.thumbnail,
+            250,
+            250,
+          ),
           mimetype: "video/mp4",
           fileName: rdvid.title + ".mp4",
           caption: xzzz,
