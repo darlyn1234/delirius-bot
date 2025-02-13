@@ -26,6 +26,7 @@
     "fluent-ffmpeg": "^2.1.2",
     "fs": "^0.0.1-security",
     "gradient-string": "^2.0.0",
+    "jimp": "^0.16.13",
     "link-preview-js": "^3.0.13",
     "lodash": "^4.17.21",
     "mime-types": "^2.1.34",
