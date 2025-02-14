@@ -22,7 +22,6 @@ module.exports = {
   help: ["ping"],
   exec: async (m, client, { prefix }) => {
     let { stats } = await info("stats");
-    now = new Date();
     let txt = `	╭  ✦ Bot Stats ✦  ╮\n
  *◦ Media enviada :* ${humanFileSize(stats.filesize, true) || "0kbps"}
  *◦ Msg recibidos :* ${stats.msgRecv || 0}
@@ -34,6 +33,7 @@ module.exports = {
 	╭  ✦ System Status ✦  ╮\n
  *◦ Autotyping :* ${config.composing ? "[ √ ]" : "[ × ]"}
  *◦ Autoread :* ${config.autoRead ? "[ √ ]" : "[ × ]"}
+ *◦ OnlyOwner :* ${config.onlyowner ? "[ √ ]" : "[ × ]"}
  *◦ Autopost :* ${config.autoPost ? "[ √ ]" : "[ × ]"}\n
 > ʟɪɢʜᴛᴡᴇɪɢʜᴛ ᴡᴀʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ${config.BOT_CONFIG.CREATOR_NAME} ©`;
     client.sendMessage(
