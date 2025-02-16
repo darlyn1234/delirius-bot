@@ -22,16 +22,20 @@ module.exports = {
           },
         },
       );
-      let txtdlauto = `亗 T I K T O K\n
-*› Nombre :* ${rtiktokdl.data.author.nickname}
-*› Usuario :* ${rtiktokdl.data.author.username}
-*› Duración :* ${rtiktokdl.data.duration}s
-*› Reproducido :* ${ConvertMiles(rtiktokdl.data.repro)}
-*› Likes :* ${ConvertMiles(rtiktokdl.data.like)}
-*› Compartido :* ${ConvertMiles(rtiktokdl.data.share)}
-*› Comentario :* ${ConvertMiles(rtiktokdl.data.comment)}
-*› Descargas :* ${ConvertMiles(rtiktokdl.data.download)}
-*› Música :* ${rtiktokdl.data.music.title}\n\n> *❄️ Powered By ${BOT_CONFIG.BOT_NAME}*`;
+      let txtdlauto = `	╭  ✦ User Profile ✦  ╮\n
+ *◦ Nombre :* ${rtiktokdl.data.author.nickname}
+ *◦ Usuario :* ${rtiktokdl.data.author.username}
+ *◦ Duración :* ${rtiktokdl.data.duration}s
+ *◦ Reproducido :* ${ConvertMiles(rtiktokdl.data.repro)}
+ *◦ Likes :* ${ConvertMiles(rtiktokdl.data.like)}
+ *◦ Compartido :* ${ConvertMiles(rtiktokdl.data.share)}
+ *◦ Comentarios :* ${ConvertMiles(rtiktokdl.data.comment)}
+ *◦ Descargas :* ${ConvertMiles(rtiktokdl.data.download)}\n
+	╭  ✦ Music Info ✦  ╮\n
+ *◦ Música :* ${rtiktokdl.data.music.title}
+ *◦ Autor :* ${rtiktokdl.data.music.author}
+ *◦ Duración :* ${rtiktokdl.data.music.duration}\n
+> ʟɪɢʜᴛᴡᴇɪɢʜᴛ ᴡᴀʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ${BOT_CONFIG.CREATOR_NAME} ©`;
       if (rtiktokdl.data.meta.media[0].type === "video") {
         await Darlyn.sendMessage(
           m.chat,
