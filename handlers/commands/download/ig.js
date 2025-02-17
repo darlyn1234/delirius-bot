@@ -36,8 +36,8 @@ module.exports = {
             `*› Comentarios :* ${ConvertMiles(result.comments) || "-"}\n` +
             `*› Publicado :* ${result.published || "-"}\n` +
             `*› Follows :* ${ConvertMiles(result.followed) || "-"}\n` +
-            `*› Verificado :* ${result.is_verified ? "√" : "×"}\n` +
-            `*› Private :* ${result.is_private ? "√" : "×"}\n` +
+            `*› Verificado :* ${result.is_verified ? "×" : "√"}\n` +
+            `*› Private :* ${result.is_private ? "×" : "√"}\n` +
             `\n*Powered By ${BOT_CONFIG.BOT_NAME}*`,
           m,
           "",
