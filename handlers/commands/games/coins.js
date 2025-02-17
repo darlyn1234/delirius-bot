@@ -4,8 +4,8 @@ const { milesToComas } = require("../../../utils/index");
 
 module.exports = {
   tags: ["games"],
-  cmd: ["balance", "bal"],
-  help: ["balance"],
+  cmd: ["balance", "bal", "coins"],
+  help: ["coins"],
   exec: async (m, Darlyn, { prefix, cmd }) => {
     const user_info = await Users.get(m.sender);
     const group_db = await groupManage.get(m.chat);
