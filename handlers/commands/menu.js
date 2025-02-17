@@ -10,14 +10,7 @@ const { default: axios } = require("axios");
 
 module.exports = {
   cmd: ["menu", "help"],
-  tags: ["main"],
   help: ["help"],
-  /**
-   *
-   * @param {import("@whiskeysockets/baileys").proto.IWebMessageInfo} m
-   * @param {import("@whiskeysockets/baileys").WASocket} Delirius
-   * @returns
-   */
   exec: async (m, Delirius, { prefix, plugins }) => {
     try {
       const flag = (
@@ -37,7 +30,7 @@ module.exports = {
 > › ᴘᴀɪꜱ & ᴅᴇᴠɪᴄᴇ : ${flag.result.name} ${flag.result.emoji} (%device)
 
 %readmore\n`.trimStart();
-      const header = "   \`%category\`\n";
+      const header = "   `%category`\n";
       const body = "* *%cmd* %opts%args %flags";
       const footer = "";
       const after = "> Powered by Delirius";
@@ -48,19 +41,17 @@ module.exports = {
             plugin.regex ||
             plugin.startsWith,
         )
-        .map((x) => {
-          return {
-            help: Array.isArray(x.tags) ? x.help : [x.help],
-            tags: Array.isArray(x.tags) ? x.tags : [x.tags],
-            links: x.link != "undefined" ? x.link : "",
-            customPrefix: x.startsWith ? x.startsWith : "",
-            opts: x.opts,
-            args: x.args,
-            flags: x.flags,
-          };
-        });
+        .map((x) => ({
+          help: Array.isArray(x.tags) ? x.help : [x.help],
+          tags: Array.isArray(x.tags) ? x.tags : [x.tags],
+          links: x.link !== "undefined" ? x.link : "",
+          customPrefix: x.startsWith ? x.startsWith : "",
+          opts: x.opts,
+          args: x.args,
+          flags: x.flags,
+        }));
       const links = help
-        .filter((x) => x.links != undefined)
+        .filter((x) => x.links !== undefined)
         .map((x) => x.links);
       const category = {};
       for (let plugin of help)
@@ -82,10 +73,11 @@ module.exports = {
                   (a) =>
                     (a.tags && a.tags.includes(tag) && a.help) || a.startsWith,
                 )
-                .map((menu) => {
-                  return menu.help
-                    .map((help) => {
-                      return body
+                .sort((a, b) => a.help[0].localeCompare(b.help[0]))
+                .map((menu) =>
+                  menu.help
+                    .map((help) =>
+                      body
                         .replace(
                           /%cmd/g,
                           menu.customPrefix ? menu.customPrefix : prefix + help,
@@ -102,19 +94,31 @@ module.exports = {
                           /%flags/g,
                           menu.flags ? `( --${menu.flags.join(" --")} )` : "",
                         )
-                        .trim();
-                    })
-                    .join("\n");
-                }),
+                        .trim(),
+                    )
+                    .join("\n"),
+                ),
               footer,
             ].join("\n")
           );
         }),
         after,
       ].join("\n");
-      Delirius.sendMessage(
+      /*Delirius.sendMessage(
         m.chat,
         { image: { url: img }, caption: _text, mentions: [m.sender] },
+        { quoted: m },
+      );*/
+      Delirius.sendMessage(
+        m.chat,
+        {
+          video: {
+            url: "https://deliriusdocumentation.vercel.app/preview.m4v",
+          },
+          gifPlayback: true,
+          caption: _text,
+          mentions: [m.sender]
+        },
         { quoted: m },
       );
     } catch (error) {
