@@ -20,7 +20,7 @@ module.exports = {
     const nameee = await Darlyn.getName(who);
     if (!m.isGroup) return m.reply(MSG.groupMsg);
     if (m.isGroup && !group_db.games)
-      return m.reply("*🚩 Los minijuegos ha sido desactivado en este grupo.*");
+      return m.reply("*🚩 Los minijuegos fueron desactivados en este grupo.*");
     if (!user_info)
       return m.reply(
         "*🚩 " + nameee + " no esta registrado en mi base de datos.*",

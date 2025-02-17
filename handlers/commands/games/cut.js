@@ -15,7 +15,7 @@ module.exports = {
     const group_db = await groupManage.get(m.chat);
     if (!m.isGroup) return m.reply(MSG_CNG.MSG.groupMsg);
     if (m.isGroup && !group_db.games)
-      return m.reply("*🚩 Los minijuegos ha sido desactivado en este grupo.*");
+      return m.reply("*🚩 Los minijuegos fueron desactivados en este grupo.*");
     const time = user_info.fell_time || 0;
     if (new Date() - time < 300000) {
       m.reply(
