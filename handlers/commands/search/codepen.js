@@ -6,7 +6,7 @@ module.exports = {
   args: ["query"],
   cmd: ["codepen"],
   help: ["codepen"],
-  exec: async (m, Darlyn, { args }) => {
+  exec: async (m, Darlyn, { prefix, cmd, args }) => {
     try {
       if (args.length < 1) return m.reply(`*🚩 Ejemplo :* ${prefix + cmd} threejs`);
       const response = await axios.get(BASE_URL + "/search/codepen", {
