@@ -22,7 +22,7 @@ module.exports = {
           },
         },
       );
-      let txtdlauto = `	╭  ✦ User Profile ✦  ╮\n
+      let txtdlauto = `	╭  ✦ TikTok Download ✦  ╮\n
  *◦ Nombre :* ${rtiktokdl.data.author.nickname}
  *◦ Usuario :* ${rtiktokdl.data.author.username}
  *◦ Duración :* ${rtiktokdl.data.duration}s
