@@ -1,475 +1,470 @@
-const _0x22a198 = _0x363e;
-function _0xcb79() {
-  const _0x2f1673 = [
-    "1120008aQYeUu",
-    "message",
-    "2152595Tvuphb",
-    "8724aeJydq",
-    "map",
-    "SELECT\x20*\x20FROM\x20users",
-    "SELECT\x20*\x20FROM\x20groups\x20WHERE\x20id\x20=\x20?",
-    "SELECT\x20*\x20FROM\x20users\x20WHERE\x20id\x20=\x20?",
-    "changes",
-    "Database",
+const _0x55b40d = _0x5904;
+function _0x5c1c() {
+  const _0xfe959c = [
+    "error",
     "verbose",
-    "980XKMpTr",
-    "SELECT\x201\x20FROM\x20afk\x20WHERE\x20jid\x20=\x20?\x20AND\x20groupId\x20=\x20?",
-    "CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20config\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20session_id\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20removeBG\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20musixMatch\x20TEXT\x0a\x20\x20\x20\x20\x20\x20\x20\x20)",
-    "SELECT\x20*\x20FROM\x20config",
-    "get",
-    "catch",
-    "join",
-    "CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20afk\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jid\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20groupId\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20groupName\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20timestamp\x20INTEGER,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20reason\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20PRIMARY\x20KEY\x20(jid,\x20groupId)\x0a\x20\x20\x20\x20\x20\x20\x20\x20)",
-    "Error\x20al\x20abrir\x20la\x20base\x20de\x20datos",
-    "Base\x20de\x20datos\x20SQLite\x20conectada.",
-    "811687Cxxzul",
-    "12313791AmCBHU",
-    "INSERT\x20INTO\x20groups\x20(id,\x20groupName)\x20VALUES\x20(?,\x20?)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20CONFLICT(id)\x20DO\x20NOTHING",
-    "CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20stats\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20prop\x20TEXT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20count\x20INTEGER\x20DEFAULT\x201\x0a\x20\x20\x20\x20\x20\x20\x20\x20)",
-    "all",
-    "then",
     "groupManage",
-    "keys",
+    "CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20afk\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jid\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20groupId\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20groupName\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20timestamp\x20INTEGER,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20reason\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20PRIMARY\x20KEY\x20(jid,\x20groupId)\x0a\x20\x20\x20\x20\x20\x20\x20\x20)",
+    "configHandler",
+    "then",
     "database.db",
-    "UPDATE\x20stats\x20SET\x20count\x20=\x20count\x20+\x20?\x20WHERE\x20prop\x20=\x20?",
-    "7jucWOp",
-    "statistics",
+    "INSERT\x20INTO\x20afk\x20(jid,\x20groupId,\x20groupName,\x20timestamp,\x20reason)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20CONFLICT(jid,\x20groupId)\x20DO\x20UPDATE\x20SET\x20timestamp\x20=\x20excluded.timestamp,\x20reason\x20=\x20excluded.reason",
+    "keys",
+    "get",
+    "SELECT\x20*\x20FROM\x20config",
+    "SELECT\x20*\x20FROM\x20afk\x20WHERE\x20jid\x20=\x20?\x20AND\x20groupId\x20=\x20?",
+    "441196JZIoQf",
+    "catch",
+    "SELECT\x20*\x20FROM\x20",
+    "CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20groups\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20TEXT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20groupName\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20antilink\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20mute\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20leveling\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20viewonce\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20games\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pokemon\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20extranjeros\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20antidelete\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nsfw\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20raid\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20time\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20welcome_status\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20welcome_text\x20TEXT\x20DEFAULT\x20\x27🍟\x20Bienvenido/a\x20@user\x20al\x20grupo:\x20*{title}*\x20{foto}\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20leave_status\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20leave_text\x20TEXT\x20DEFAULT\x20\x27*🧃\x20Adios*\x20@user\x20{foto}\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20)",
+    "SELECT\x20*\x20FROM\x20afk",
+    "30360533FFxYoP",
+    "SELECT\x20*\x20FROM\x20users",
+    "Base\x20de\x20datos\x20SQLite\x20conectada.",
     "\x20=\x20?\x20WHERE\x20id\x20=\x20?",
-    "path",
+    "CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20users\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20id\x20TEXT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20name\x20TEXT\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20profile\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20level\x20INTEGER\x20DEFAULT\x201,\x0a\x20\x20\x20\x20\x20\x20\x20\x20balance\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20time\x20TEXT\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20now\x20TEXT\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20xp\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20banned\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20bloq\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20warning\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20married_boolean\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20married_id\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20mine\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20gold\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20diamonds\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20three\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20palm\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20pines\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20fish\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20marucha\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20squid\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20apple\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20orange\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20lemon\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20mine_time\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20fished_time\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20fell_time\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20harvest_time\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20bank\x20INTEGER\x20DEFAULT\x200\x0a\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20",
+    "message",
+    "statistics",
+    "UPDATE\x20stats\x20SET\x20count\x20=\x20count\x20+\x20?\x20WHERE\x20prop\x20=\x20?",
+    "\x20=\x20?",
+    "UPDATE\x20config\x20SET\x20",
+    "sqlite3",
+    "1237236YpWnDQ",
     "log",
     "run",
-    "error",
-    "DELETE\x20FROM\x20afk\x20WHERE\x20jid\x20=\x20?\x20AND\x20groupId\x20=\x20?",
-    "SELECT\x20*\x20FROM\x20afk",
-    "prop",
-    "forEach",
-    "SELECT\x20*\x20FROM\x20afk\x20WHERE\x20jid\x20=\x20?\x20AND\x20groupId\x20=\x20?",
-    "5411136rrRwKZ",
-    "info",
-    "INSERT\x20INTO\x20afk\x20(jid,\x20groupId,\x20groupName,\x20timestamp,\x20reason)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20CONFLICT(jid,\x20groupId)\x20DO\x20UPDATE\x20SET\x20timestamp\x20=\x20excluded.timestamp,\x20reason\x20=\x20excluded.reason",
+    "all",
+    "AFK",
     "count",
-    "SELECT\x20count\x20FROM\x20stats\x20WHERE\x20prop\x20=\x20?",
-    "UPDATE\x20groups\x20SET\x20",
-    "UPDATE\x20config\x20SET\x20",
-    "\x20=\x20?",
-    "2080516ZWyNMp",
+    "CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20stats\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20prop\x20TEXT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20count\x20INTEGER\x20DEFAULT\x201\x0a\x20\x20\x20\x20\x20\x20\x20\x20)",
+    "Database",
+    "forEach",
     "update",
-    "configHandler",
+    "4185444DYlLEy",
+    "map",
+    "info",
+    "4023812LQuovG",
+    "INSERT\x20INTO\x20users\x20(id,\x20name,\x20profile,\x20level,\x20balance,\x20time,\x20now,\x20xp,\x20banned,\x20bloq,\x20warning,\x20married_boolean,\x20married_id,\x20mine,\x20gold,\x20diamonds,\x20three,\x20palm,\x20pines,\x20fish,\x20marucha,\x20squid,\x20apple,\x20orange,\x20lemon,\x20mine_time,\x20fished_time,\x20fell_time,\x20harvest_time,\x20bank)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)",
+    "DELETE\x20FROM\x20afk\x20WHERE\x20jid\x20=\x20?\x20AND\x20groupId\x20=\x20?",
+    "SELECT\x20count\x20FROM\x20stats\x20WHERE\x20prop\x20=\x20?",
+    "1736328nTiSSr",
     "UPDATE\x20users\x20SET\x20",
+    "changes",
+    "6050260RCPNhf",
+    "SELECT\x201\x20FROM\x20afk\x20WHERE\x20jid\x20=\x20?\x20AND\x20groupId\x20=\x20?",
   ];
-  _0xcb79 = function () {
-    return _0x2f1673;
+  _0x5c1c = function () {
+    return _0xfe959c;
   };
-  return _0xcb79();
+  return _0x5c1c();
 }
-(function (_0x118e60, _0x538f4e) {
-  const _0x342598 = _0x363e,
-    _0x144a0f = _0x118e60();
+(function (_0x42d8fb, _0x525e5a) {
+  const _0x1efa97 = _0x5904,
+    _0x45322c = _0x42d8fb();
   while (!![]) {
     try {
-      const _0x6e164f =
-        -parseInt(_0x342598(0x162)) / 0x1 +
-        -parseInt(_0x342598(0x149)) / 0x2 +
-        (parseInt(_0x342598(0x150)) / 0x3) *
-          (parseInt(_0x342598(0x158)) / 0x4) +
-        -parseInt(_0x342598(0x14f)) / 0x5 +
-        (parseInt(_0x342598(0x141)) / 0x6) *
-          (parseInt(_0x342598(0x135)) / 0x7) +
-        -parseInt(_0x342598(0x14d)) / 0x8 +
-        parseInt(_0x342598(0x163)) / 0x9;
-      if (_0x6e164f === _0x538f4e) break;
-      else _0x144a0f["push"](_0x144a0f["shift"]());
-    } catch (_0x247956) {
-      _0x144a0f["push"](_0x144a0f["shift"]());
+      const _0x2f6582 =
+        parseInt(_0x1efa97(0x1d3)) / 0x1 +
+        -parseInt(_0x1efa97(0x1b1)) / 0x2 +
+        -parseInt(_0x1efa97(0x1bb)) / 0x3 +
+        -parseInt(_0x1efa97(0x1be)) / 0x4 +
+        -parseInt(_0x1efa97(0x1c5)) / 0x5 +
+        parseInt(_0x1efa97(0x1c2)) / 0x6 +
+        parseInt(_0x1efa97(0x1d8)) / 0x7;
+      if (_0x2f6582 === _0x525e5a) break;
+      else _0x45322c["push"](_0x45322c["shift"]());
+    } catch (_0x2ea9d4) {
+      _0x45322c["push"](_0x45322c["shift"]());
     }
   }
-})(_0xcb79, 0x88bb2);
-const sqlite3 = require("sqlite3")[_0x22a198(0x157)](),
-  path = require(_0x22a198(0x138)),
-  dbPath = path[_0x22a198(0x15e)](__dirname, _0x22a198(0x16a)),
-  db = new sqlite3[_0x22a198(0x156)](dbPath, (_0x4a5a82) => {
-    const _0x704762 = _0x22a198;
-    _0x4a5a82
-      ? console[_0x704762(0x13b)](_0x704762(0x160), _0x4a5a82[_0x704762(0x14e)])
-      : (console[_0x704762(0x139)](_0x704762(0x161)),
-        db[_0x704762(0x13a)](_0x704762(0x165)),
-        db[_0x704762(0x13a)](
-          "CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20groups\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20TEXT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20groupName\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20antilink\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20mute\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20leveling\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20viewonce\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20games\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pokemon\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20extranjeros\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20antidelete\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nsfw\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20time\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20welcome\x20TEXT\x20DEFAULT\x20\x27Welcome\x20@user\x20in\x20group\x20{title}\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20leave\x20TEXT\x20DEFAULT\x20\x27Goodbye\x20@user\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20)",
+})(_0x5c1c, 0xcc990);
+const sqlite3 = require(_0x55b40d(0x1b0))[_0x55b40d(0x1c8)](),
+  path = require("path"),
+  dbPath = path["join"](__dirname, _0x55b40d(0x1cd)),
+  db = new sqlite3[_0x55b40d(0x1b8)](dbPath, (_0x19962f) => {
+    const _0x2615c3 = _0x55b40d;
+    _0x19962f
+      ? console[_0x2615c3(0x1c7)](
+          "Error\x20al\x20abrir\x20la\x20base\x20de\x20datos",
+          _0x19962f[_0x2615c3(0x1dd)],
+        )
+      : (console[_0x2615c3(0x1b2)](_0x2615c3(0x1da)),
+        db[_0x2615c3(0x1b3)](_0x2615c3(0x1b7)),
+        db[_0x2615c3(0x1b3)](_0x2615c3(0x1d6)),
+        db[_0x2615c3(0x1b3)](_0x2615c3(0x1ca)),
+        db[_0x2615c3(0x1b3)](
+          "CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20config\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20session_id\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20removeBG\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20musixMatch\x20TEXT\x0a\x20\x20\x20\x20\x20\x20\x20\x20)",
         ),
-        db[_0x704762(0x13a)](_0x704762(0x15f)),
-        db[_0x704762(0x13a)](_0x704762(0x15a)),
-        db[_0x704762(0x13a)](
-          "CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20users\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20id\x20TEXT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20name\x20TEXT\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20profile\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20level\x20INTEGER\x20DEFAULT\x201,\x0a\x20\x20\x20\x20\x20\x20\x20\x20balance\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20time\x20TEXT\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20now\x20TEXT\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20xp\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20banned\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20bloq\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20warning\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20married_boolean\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20married_id\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20mine\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20gold\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20diamonds\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20three\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20palm\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20pines\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20fish\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20marucha\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20squid\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20apple\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20orange\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20lemon\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20mine_time\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20fished_time\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20fell_time\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20harvest_time\x20INTEGER\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20bank\x20INTEGER\x20DEFAULT\x200\x0a\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20",
-        ));
+        db[_0x2615c3(0x1b3)](_0x2615c3(0x1dc)));
   });
-function _0x363e(_0x2b8413, _0x592bce) {
-  const _0xcb79e5 = _0xcb79();
+function _0x5904(_0x8f5d90, _0x59d340) {
+  const _0x5c1c1e = _0x5c1c();
   return (
-    (_0x363e = function (_0x363eef, _0xfc2c4f) {
-      _0x363eef = _0x363eef - 0x134;
-      let _0x4df451 = _0xcb79e5[_0x363eef];
-      return _0x4df451;
+    (_0x5904 = function (_0x59049a, _0x266ba8) {
+      _0x59049a = _0x59049a - 0x1ae;
+      let _0x409c16 = _0x5c1c1e[_0x59049a];
+      return _0x409c16;
     }),
-    _0x363e(_0x2b8413, _0x592bce)
+    _0x5904(_0x8f5d90, _0x59d340)
   );
 }
-(exports[_0x22a198(0x14b)] = {
+(exports[_0x55b40d(0x1cb)] = {
   get: async () => {
-    return new Promise((_0x138ea0, _0x5cdf7) => {
-      const _0x5c25b1 = _0x363e;
-      db["get"](_0x5c25b1(0x15b), [], (_0x317759, _0x1e0eb0) => {
-        if (_0x317759) _0x5cdf7(_0x317759);
-        else _0x138ea0(_0x1e0eb0 || {});
+    return new Promise((_0x34296a, _0x34db74) => {
+      const _0x36ecf2 = _0x5904;
+      db[_0x36ecf2(0x1d0)](_0x36ecf2(0x1d1), [], (_0x5d267f, _0x132d78) => {
+        if (_0x5d267f) _0x34db74(_0x5d267f);
+        else _0x34296a(_0x132d78 || {});
       });
     });
   },
-  update: async (_0x178a64, _0x34e5b9) => {
-    return new Promise((_0x477307, _0x153375) => {
-      const _0xc27d45 = _0x363e;
-      db["run"](
-        _0xc27d45(0x147) + _0x178a64 + _0xc27d45(0x148),
-        [_0x34e5b9],
-        function (_0x57be62) {
-          const _0x560ce4 = _0xc27d45;
-          if (_0x57be62) _0x153375(_0x57be62);
-          else _0x477307(this[_0x560ce4(0x155)] > 0x0);
+  update: async (_0x91b224, _0x26a08f) => {
+    return new Promise((_0x17ac86, _0x2fbf2b) => {
+      const _0x2474a9 = _0x5904;
+      db[_0x2474a9(0x1b3)](
+        _0x2474a9(0x1af) + _0x91b224 + _0x2474a9(0x1ae),
+        [_0x26a08f],
+        function (_0x5d3297) {
+          const _0xab84cb = _0x2474a9;
+          if (_0x5d3297) _0x2fbf2b(_0x5d3297);
+          else _0x17ac86(this[_0xab84cb(0x1c4)] > 0x0);
         },
       );
     });
   },
 }),
-  (exports[_0x22a198(0x136)] = async (_0x475126, _0x3469ab = 0x1) => {
-    return new Promise((_0x1a9994, _0x2ada63) => {
-      const _0x3ec6f9 = _0x363e;
-      db["get"](_0x3ec6f9(0x145), [_0x475126], (_0x5a75e9, _0x31f86f) => {
-        const _0x202383 = _0x3ec6f9;
-        if (_0x5a75e9) _0x2ada63(_0x5a75e9);
-        !_0x31f86f
-          ? db[_0x202383(0x13a)](
+  (exports[_0x55b40d(0x1de)] = async (_0x129214, _0x5f5370 = 0x1) => {
+    return new Promise((_0x1bb43a, _0x387699) => {
+      const _0x27b922 = _0x5904;
+      db["get"](_0x27b922(0x1c1), [_0x129214], (_0x2a959c, _0x48288e) => {
+        const _0x3901af = _0x27b922;
+        if (_0x2a959c) _0x387699(_0x2a959c);
+        !_0x48288e
+          ? db["run"](
               "INSERT\x20INTO\x20stats\x20(prop,\x20count)\x20VALUES\x20(?,\x20?)",
-              [_0x475126, 0x0],
-              (_0x444335) => {
-                const _0x542bbb = _0x202383;
-                if (_0x444335) _0x2ada63(_0x444335);
+              [_0x129214, 0x0],
+              (_0x5271bd) => {
+                const _0x582c6a = _0x5904;
+                if (_0x5271bd) _0x387699(_0x5271bd);
                 else
-                  db[_0x542bbb(0x13a)](
-                    _0x542bbb(0x134),
-                    [_0x3469ab, _0x475126],
-                    (_0xf773c9) => {
-                      if (_0xf773c9) _0x2ada63(_0xf773c9);
-                      else _0x1a9994(!![]);
+                  db[_0x582c6a(0x1b3)](
+                    _0x582c6a(0x1df),
+                    [_0x5f5370, _0x129214],
+                    (_0x32ec54) => {
+                      if (_0x32ec54) _0x387699(_0x32ec54);
+                      else _0x1bb43a(!![]);
                     },
                   );
               },
             )
-          : db["run"](
+          : db[_0x3901af(0x1b3)](
               "UPDATE\x20stats\x20SET\x20count\x20=\x20count\x20+\x20?\x20WHERE\x20prop\x20=\x20?",
-              [_0x3469ab, _0x475126],
-              (_0x4562ca) => {
-                if (_0x4562ca) _0x2ada63(_0x4562ca);
-                else _0x1a9994(!![]);
+              [_0x5f5370, _0x129214],
+              (_0x382394) => {
+                if (_0x382394) _0x387699(_0x382394);
+                else _0x1bb43a(!![]);
               },
             );
       });
     });
   }),
-  (exports[_0x22a198(0x142)] = async (_0x6362ef) => {
-    return new Promise((_0x54b1b2, _0x275208) => {
-      const _0x12b2b6 = _0x363e;
-      db[_0x12b2b6(0x166)](
-        "SELECT\x20*\x20FROM\x20" + _0x6362ef,
+  (exports[_0x55b40d(0x1bd)] = async (_0x919e14) => {
+    return new Promise((_0x2e09ac, _0x46c186) => {
+      const _0x4db53a = _0x5904;
+      db[_0x4db53a(0x1b4)](
+        _0x4db53a(0x1d5) + _0x919e14,
         [],
-        (_0x246281, _0x303645) => {
-          const _0x5e1521 = _0x12b2b6;
-          if (_0x246281) _0x275208(_0x246281);
+        (_0x4a52e2, _0x4c9f57) => {
+          const _0x62e60 = _0x4db53a;
+          if (_0x4a52e2) _0x46c186(_0x4a52e2);
           else {
-            const _0x5d9fd0 = {};
-            _0x303645[_0x5e1521(0x13f)]((_0x1b8e4d) => {
-              const _0x328e3b = _0x5e1521;
-              _0x5d9fd0[_0x1b8e4d[_0x328e3b(0x13e)]] =
-                _0x1b8e4d[_0x328e3b(0x144)];
+            const _0x40ba06 = {};
+            _0x4c9f57[_0x62e60(0x1b9)]((_0x2d1b53) => {
+              const _0x2e7882 = _0x62e60;
+              _0x40ba06[_0x2d1b53["prop"]] = _0x2d1b53[_0x2e7882(0x1b6)];
             }),
-              _0x54b1b2({ stats: _0x5d9fd0 });
+              _0x2e09ac({ stats: _0x40ba06 });
           }
         },
       );
     });
   }),
-  (exports[_0x22a198(0x168)] = {
-    add: async (_0x11c7b8, _0xe1addc) => {
-      return new Promise((_0x2e3477, _0x234102) => {
-        const _0x21aa7c = _0x363e;
-        db[_0x21aa7c(0x13a)](
-          _0x21aa7c(0x164),
-          [_0x11c7b8, _0xe1addc],
-          (_0x55c77c) => {
-            if (_0x55c77c) _0x234102(_0x55c77c);
-            else _0x2e3477(!![]);
+  (exports[_0x55b40d(0x1c9)] = {
+    add: async (_0xaa7d2d, _0x3b76b0) => {
+      return new Promise((_0x3e0c48, _0x1931cc) => {
+        const _0x442eda = _0x5904;
+        db[_0x442eda(0x1b3)](
+          "INSERT\x20INTO\x20groups\x20(id,\x20groupName)\x20VALUES\x20(?,\x20?)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20CONFLICT(id)\x20DO\x20NOTHING",
+          [_0xaa7d2d, _0x3b76b0],
+          (_0x54a273) => {
+            if (_0x54a273) _0x1931cc(_0x54a273);
+            else _0x3e0c48(!![]);
           },
         );
       });
     },
-    update: async (_0xe73e8d, _0x6895d1) => {
-      return new Promise((_0x8cddcf, _0x70a849) => {
-        const _0x3efe35 = _0x363e,
-          _0x3631d2 = Object[_0x3efe35(0x169)](_0x6895d1);
-        let _0x31ae29 = _0x3631d2[_0x3efe35(0x151)]((_0x590e20) => {
-          return new Promise((_0x2ecf61, _0x25e1c0) => {
-            const _0x8d268e = _0x363e;
+    update: async (_0x24dfab, _0x5c3330) => {
+      return new Promise((_0x8543db, _0x111d4e) => {
+        const _0x46b496 = _0x5904,
+          _0x15a2aa = Object["keys"](_0x5c3330);
+        let _0x30cead = _0x15a2aa[_0x46b496(0x1bc)]((_0x525f64) => {
+          return new Promise((_0x294a93, _0x2e08fe) => {
+            const _0xd7945c = _0x5904;
             db["run"](
-              _0x8d268e(0x146) +
-                _0x590e20 +
-                "\x20=\x20?\x20WHERE\x20id\x20=\x20?",
-              [_0x6895d1[_0x590e20], _0xe73e8d],
-              (_0x59b3f8) => {
-                if (_0x59b3f8) _0x25e1c0(_0x59b3f8);
-                else _0x2ecf61(!![]);
+              "UPDATE\x20groups\x20SET\x20" + _0x525f64 + _0xd7945c(0x1db),
+              [_0x5c3330[_0x525f64], _0x24dfab],
+              (_0x53935a) => {
+                if (_0x53935a) _0x2e08fe(_0x53935a);
+                else _0x294a93(!![]);
               },
             );
           });
         });
-        Promise[_0x3efe35(0x166)](_0x31ae29)
-          [_0x3efe35(0x167)](() => _0x8cddcf(!![]))
-          [_0x3efe35(0x15d)](_0x70a849);
+        Promise[_0x46b496(0x1b4)](_0x30cead)
+          ["then"](() => _0x8543db(!![]))
+          [_0x46b496(0x1d4)](_0x111d4e);
       });
     },
-    get: async (_0x48b23b) => {
-      return new Promise((_0x1c83e9, _0x3bab22) => {
-        const _0x423a13 = _0x363e;
-        db[_0x423a13(0x15c)](
-          _0x423a13(0x153),
-          [_0x48b23b],
-          (_0x2de295, _0x5e49bc) => {
-            if (_0x2de295) _0x3bab22(_0x2de295);
-            else _0x1c83e9(_0x5e49bc || {});
+    get: async (_0x262ad3) => {
+      return new Promise((_0x30aa42, _0x5ca994) => {
+        const _0x4360c5 = _0x5904;
+        db[_0x4360c5(0x1d0)](
+          "SELECT\x20*\x20FROM\x20groups\x20WHERE\x20id\x20=\x20?",
+          [_0x262ad3],
+          (_0x245110, _0x535c85) => {
+            if (_0x245110) _0x5ca994(_0x245110);
+            else _0x30aa42(_0x535c85 || {});
           },
         );
       });
     },
   }),
-  (exports["AFK"] = {
-    add: async (_0x3d9f1d, _0x274d18, _0xcfb439, _0x14218b, _0x1a435e) => {
-      return new Promise((_0x13a4e8, _0x3762e0) => {
-        const _0x1b766a = _0x363e;
-        db["run"](
-          _0x1b766a(0x143),
-          [_0x3d9f1d, _0x274d18, _0xcfb439, _0x14218b, _0x1a435e],
-          (_0x8e779) => {
-            if (_0x8e779) _0x3762e0(_0x8e779);
-            else _0x13a4e8(!![]);
+  (exports[_0x55b40d(0x1b5)] = {
+    add: async (_0x3386aa, _0x2aa25e, _0x3dc98b, _0xa90de4, _0x202ef3) => {
+      return new Promise((_0x24e548, _0x1e145d) => {
+        const _0x1d7716 = _0x5904;
+        db[_0x1d7716(0x1b3)](
+          _0x1d7716(0x1ce),
+          [_0x3386aa, _0x2aa25e, _0x3dc98b, _0xa90de4, _0x202ef3],
+          (_0x1452bf) => {
+            if (_0x1452bf) _0x1e145d(_0x1452bf);
+            else _0x24e548(!![]);
           },
         );
       });
     },
-    check: async (_0xf971c5, _0x286be6) => {
-      return new Promise((_0x2a2607, _0x3030e9) => {
-        const _0x11d13d = _0x363e;
-        db[_0x11d13d(0x15c)](
-          _0x11d13d(0x159),
-          [_0xf971c5, _0x286be6],
-          (_0xec5db3, _0x194af4) => {
-            if (_0xec5db3) _0x3030e9(_0xec5db3);
-            else _0x2a2607(!!_0x194af4);
+    check: async (_0x2be9eb, _0x40937d) => {
+      return new Promise((_0x5739b1, _0x9b541c) => {
+        const _0x566b86 = _0x5904;
+        db[_0x566b86(0x1d0)](
+          _0x566b86(0x1c6),
+          [_0x2be9eb, _0x40937d],
+          (_0xa76cd6, _0x47750f) => {
+            if (_0xa76cd6) _0x9b541c(_0xa76cd6);
+            else _0x5739b1(!!_0x47750f);
           },
         );
       });
     },
-    get: async (_0x2fa2f7, _0x4c6d8a) => {
-      return new Promise((_0x50126c, _0x25009b) => {
-        const _0x528c3a = _0x363e;
-        db[_0x528c3a(0x15c)](
-          _0x528c3a(0x140),
-          [_0x2fa2f7, _0x4c6d8a],
-          (_0x19cd98, _0x1a21e8) => {
-            if (_0x19cd98) _0x25009b(_0x19cd98);
-            else _0x50126c(_0x1a21e8 || {});
+    get: async (_0x1525a8, _0x1b9638) => {
+      return new Promise((_0x5f4a5d, _0x2f85d3) => {
+        const _0x428c4e = _0x5904;
+        db[_0x428c4e(0x1d0)](
+          _0x428c4e(0x1d2),
+          [_0x1525a8, _0x1b9638],
+          (_0x34f818, _0x36a96b) => {
+            if (_0x34f818) _0x2f85d3(_0x34f818);
+            else _0x5f4a5d(_0x36a96b || {});
           },
         );
       });
     },
-    delete: async (_0x39aa04, _0x232390) => {
-      return new Promise((_0x3f227c, _0x253fa8) => {
-        const _0x27e358 = _0x363e;
-        db["run"](
-          _0x27e358(0x13c),
-          [_0x39aa04, _0x232390],
-          function (_0x24e462) {
-            const _0x4dda0a = _0x27e358;
-            if (_0x24e462) _0x253fa8(_0x24e462);
-            else _0x3f227c(this[_0x4dda0a(0x155)] > 0x0);
+    delete: async (_0x4606da, _0x23edc6) => {
+      return new Promise((_0x32e38d, _0x1a6bec) => {
+        const _0xae19c6 = _0x5904;
+        db[_0xae19c6(0x1b3)](
+          _0xae19c6(0x1c0),
+          [_0x4606da, _0x23edc6],
+          function (_0x22e2a4) {
+            const _0x1f64de = _0xae19c6;
+            if (_0x22e2a4) _0x1a6bec(_0x22e2a4);
+            else _0x32e38d(this[_0x1f64de(0x1c4)] > 0x0);
           },
         );
       });
     },
     getAll: async () => {
-      return new Promise((_0x4690bd, _0x3f89b9) => {
-        const _0x3fd314 = _0x363e;
-        db["all"](_0x3fd314(0x13d), [], (_0x285ffa, _0x51c33b) => {
-          if (_0x285ffa) _0x3f89b9(_0x285ffa);
-          else _0x4690bd(_0x51c33b || []);
+      return new Promise((_0x5f34f6, _0x426647) => {
+        const _0x3d5823 = _0x5904;
+        db[_0x3d5823(0x1b4)](_0x3d5823(0x1d7), [], (_0x61447c, _0x2d6a4a) => {
+          if (_0x61447c) _0x426647(_0x61447c);
+          else _0x5f34f6(_0x2d6a4a || []);
         });
       });
     },
   }),
   (exports["Users"] = {
     add: async (
-      _0x539532,
-      _0x409d71,
-      _0x22371b = null,
-      _0x3a4eac = 0x0,
-      _0x4c4d5f = 0x0,
-      _0x2e29c3 = 0x0,
-      _0x12d6c5 = 0x0,
-      _0x2f4e30 = 0x0,
-      _0x580fc6 = ![],
-      _0x5a79ca = ![],
-      _0x4f78b6 = ![],
-      _0x4502e6 = ![],
-      _0x3ad88a = null,
-      _0xbb4c9c = 0x0,
-      _0x34fc6b = 0x0,
-      _0x5de4ce = 0x0,
-      _0x3fbf28 = 0x0,
-      _0x523c34 = 0x0,
-      _0x35cfe1 = 0x0,
-      _0x50a0dc = 0x0,
-      _0x549992 = 0x0,
-      _0x40b82f = 0x0,
-      _0x16dcaa = 0x0,
-      _0x3da5f5 = 0x0,
-      _0x5231f3 = 0x0,
-      _0x36346f = 0x0,
-      _0x1cd2d1 = 0x0,
-      _0x20b66e = 0x0,
-      _0x21ac8a = 0x0,
-      _0x153924 = 0x0,
+      _0x56dc63,
+      _0x29e681,
+      _0x5a9e9d = null,
+      _0x565b91 = 0x0,
+      _0x5029dc = 0x0,
+      _0x535bd9 = 0x0,
+      _0x16aed6 = 0x0,
+      _0x987424 = 0x0,
+      _0x146c66 = ![],
+      _0x1cbe38 = ![],
+      _0x2d2970 = ![],
+      _0x570fd8 = ![],
+      _0x38d3c1 = null,
+      _0x4f129e = 0x0,
+      _0x30681b = 0x0,
+      _0x17fbf9 = 0x0,
+      _0x1a1bd5 = 0x0,
+      _0x3313ee = 0x0,
+      _0x55a8c5 = 0x0,
+      _0x380763 = 0x0,
+      _0x215080 = 0x0,
+      _0x19efb1 = 0x0,
+      _0x5c42cb = 0x0,
+      _0x652295 = 0x0,
+      _0xb3992e = 0x0,
+      _0x2b62d2 = 0x0,
+      _0x14108f = 0x0,
+      _0xdd772a = 0x0,
+      _0x22badc = 0x0,
+      _0x5b6b54 = 0x0,
     ) => {
-      return new Promise((_0x50f998, _0xe0a9c4) => {
-        const _0x1f3564 = _0x363e;
-        db["get"](_0x1f3564(0x154), [_0x539532], (_0x133947, _0x100396) => {
-          const _0x681277 = _0x1f3564;
-          if (_0x133947) _0xe0a9c4(_0x133947);
-          else
-            _0x100396
-              ? _0x50f998(![])
-              : db[_0x681277(0x13a)](
-                  "INSERT\x20INTO\x20users\x20(id,\x20name,\x20profile,\x20level,\x20balance,\x20time,\x20now,\x20xp,\x20banned,\x20bloq,\x20warning,\x20married_boolean,\x20married_id,\x20mine,\x20gold,\x20diamonds,\x20three,\x20palm,\x20pines,\x20fish,\x20marucha,\x20squid,\x20apple,\x20orange,\x20lemon,\x20mine_time,\x20fished_time,\x20fell_time,\x20harvest_time,\x20bank)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)",
-                  [
-                    _0x539532,
-                    _0x409d71,
-                    _0x22371b,
-                    _0x3a4eac,
-                    _0x4c4d5f,
-                    _0x2e29c3,
-                    _0x12d6c5,
-                    _0x2f4e30,
-                    _0x580fc6,
-                    _0x5a79ca,
-                    _0x4f78b6,
-                    _0x4502e6,
-                    _0x3ad88a,
-                    _0xbb4c9c,
-                    _0x34fc6b,
-                    _0x5de4ce,
-                    _0x3fbf28,
-                    _0x523c34,
-                    _0x35cfe1,
-                    _0x50a0dc,
-                    _0x549992,
-                    _0x40b82f,
-                    _0x16dcaa,
-                    _0x3da5f5,
-                    _0x5231f3,
-                    _0x36346f,
-                    _0x1cd2d1,
-                    _0x20b66e,
-                    _0x21ac8a,
-                    _0x153924,
-                  ],
-                  (_0x50ea9b) => {
-                    if (_0x50ea9b) _0xe0a9c4(_0x50ea9b);
-                    else _0x50f998(!![]);
-                  },
-                );
-        });
-      });
-    },
-    get: async (_0x4bd0b5) => {
-      return new Promise((_0x4f6ebb, _0x13c018) => {
-        const _0x5b3420 = _0x363e;
-        db[_0x5b3420(0x15c)](
+      return new Promise((_0x596264, _0xc5ee7c) => {
+        const _0x30d422 = _0x5904;
+        db[_0x30d422(0x1d0)](
           "SELECT\x20*\x20FROM\x20users\x20WHERE\x20id\x20=\x20?",
-          [_0x4bd0b5],
-          (_0x33018f, _0x3643e7) => {
-            if (_0x33018f) _0x13c018(_0x33018f);
-            else _0x4f6ebb(_0x3643e7 || {});
+          [_0x56dc63],
+          (_0x520455, _0x183519) => {
+            const _0x2519b0 = _0x30d422;
+            if (_0x520455) _0xc5ee7c(_0x520455);
+            else
+              _0x183519
+                ? _0x596264(![])
+                : db["run"](
+                    _0x2519b0(0x1bf),
+                    [
+                      _0x56dc63,
+                      _0x29e681,
+                      _0x5a9e9d,
+                      _0x565b91,
+                      _0x5029dc,
+                      _0x535bd9,
+                      _0x16aed6,
+                      _0x987424,
+                      _0x146c66,
+                      _0x1cbe38,
+                      _0x2d2970,
+                      _0x570fd8,
+                      _0x38d3c1,
+                      _0x4f129e,
+                      _0x30681b,
+                      _0x17fbf9,
+                      _0x1a1bd5,
+                      _0x3313ee,
+                      _0x55a8c5,
+                      _0x380763,
+                      _0x215080,
+                      _0x19efb1,
+                      _0x5c42cb,
+                      _0x652295,
+                      _0xb3992e,
+                      _0x2b62d2,
+                      _0x14108f,
+                      _0xdd772a,
+                      _0x22badc,
+                      _0x5b6b54,
+                    ],
+                    (_0x260ffc) => {
+                      if (_0x260ffc) _0xc5ee7c(_0x260ffc);
+                      else _0x596264(!![]);
+                    },
+                  );
           },
         );
       });
     },
-    update: async (_0x4393ab, _0x302131) => {
-      return new Promise((_0x4bf498, _0x2b429f) => {
-        const _0x1b9393 = _0x363e,
-          _0x5840e2 = Object[_0x1b9393(0x169)](_0x302131);
-        let _0x4cc84f = _0x5840e2["map"]((_0x3d7aef) => {
-          return new Promise((_0x5c6268, _0x3b652d) => {
-            const _0xb19fa9 = _0x363e,
-              _0x10a1f4 =
-                typeof _0x302131[_0x3d7aef] === "boolean"
-                  ? _0x302131[_0x3d7aef]
+    get: async (_0x16da16) => {
+      return new Promise((_0xf11852, _0x1f26fb) => {
+        db["get"](
+          "SELECT\x20*\x20FROM\x20users\x20WHERE\x20id\x20=\x20?",
+          [_0x16da16],
+          (_0x4c1342, _0x46cd38) => {
+            if (_0x4c1342) _0x1f26fb(_0x4c1342);
+            else _0xf11852(_0x46cd38 || {});
+          },
+        );
+      });
+    },
+    update: async (_0x1a1480, _0x30fcdc) => {
+      return new Promise((_0x5e1aed, _0x404975) => {
+        const _0x4b2ab0 = _0x5904,
+          _0x2c26ac = Object[_0x4b2ab0(0x1cf)](_0x30fcdc);
+        let _0x2b434e = _0x2c26ac["map"]((_0x16a8bb) => {
+          return new Promise((_0x1ede1f, _0x3eaeaa) => {
+            const _0x3802ae = _0x5904,
+              _0x551316 =
+                typeof _0x30fcdc[_0x16a8bb] === "boolean"
+                  ? _0x30fcdc[_0x16a8bb]
                     ? 0x1
                     : 0x0
-                  : _0x302131[_0x3d7aef];
-            db[_0xb19fa9(0x13a)](
-              _0xb19fa9(0x14c) + _0x3d7aef + _0xb19fa9(0x137),
-              [_0x10a1f4, _0x4393ab],
-              (_0x1f4fd5) => {
-                if (_0x1f4fd5) _0x3b652d(_0x1f4fd5);
-                else _0x5c6268(!![]);
+                  : _0x30fcdc[_0x16a8bb];
+            db[_0x3802ae(0x1b3)](
+              _0x3802ae(0x1c3) + _0x16a8bb + _0x3802ae(0x1db),
+              [_0x551316, _0x1a1480],
+              (_0xdbbd87) => {
+                if (_0xdbbd87) _0x3eaeaa(_0xdbbd87);
+                else _0x1ede1f(!![]);
               },
             );
           });
         });
-        Promise[_0x1b9393(0x166)](_0x4cc84f)
-          [_0x1b9393(0x167)](() => _0x4bf498(!![]))
-          [_0x1b9393(0x15d)](_0x2b429f);
+        Promise["all"](_0x2b434e)
+          [_0x4b2ab0(0x1cc)](() => _0x5e1aed(!![]))
+          ["catch"](_0x404975);
       });
     },
-    delete: async (_0x137540) => {
-      return new Promise((_0x14526f, _0x267b75) => {
-        const _0x467328 = _0x363e;
-        db[_0x467328(0x13a)](
+    delete: async (_0x2f28b7) => {
+      return new Promise((_0x198a20, _0x90f52b) => {
+        const _0x48c7bb = _0x5904;
+        db[_0x48c7bb(0x1b3)](
           "DELETE\x20FROM\x20users\x20WHERE\x20id\x20=\x20?",
-          [_0x137540],
-          function (_0x54f491) {
-            if (_0x54f491) _0x267b75(_0x54f491);
-            else _0x14526f(this["changes"] > 0x0);
+          [_0x2f28b7],
+          function (_0x289da8) {
+            const _0x2fef34 = _0x48c7bb;
+            if (_0x289da8) _0x90f52b(_0x289da8);
+            else _0x198a20(this[_0x2fef34(0x1c4)] > 0x0);
           },
         );
       });
     },
     all: async () => {
-      return new Promise((_0x222357, _0x29c2ff) => {
-        const _0x3b8c44 = _0x363e;
-        db[_0x3b8c44(0x166)](_0x3b8c44(0x152), [], (_0x3e726e, _0x2e5caa) => {
-          if (_0x3e726e) _0x29c2ff(_0x3e726e);
-          else _0x222357(_0x2e5caa || []);
+      return new Promise((_0x2ee17d, _0x59bb72) => {
+        const _0x12be60 = _0x5904;
+        db[_0x12be60(0x1b4)](_0x12be60(0x1d9), [], (_0x44f13f, _0x1df7f3) => {
+          if (_0x44f13f) _0x59bb72(_0x44f13f);
+          else _0x2ee17d(_0x1df7f3 || []);
         });
       });
     },
-    ban: async (_0x47d018) => {
-      return this["update"](_0x47d018, { banned: !![] });
+    ban: async (_0x18f484) => {
+      const _0x413c54 = _0x55b40d;
+      return this[_0x413c54(0x1ba)](_0x18f484, { banned: !![] });
     },
-    unban: async (_0x2034c4) => {
-      const _0x1ac0a1 = _0x22a198;
-      return this[_0x1ac0a1(0x14a)](_0x2034c4, { banned: ![] });
+    unban: async (_0x56c97d) => {
+      const _0x4de24b = _0x55b40d;
+      return this[_0x4de24b(0x1ba)](_0x56c97d, { banned: ![] });
     },
-    block: async (_0x4ae9ce) => {
-      const _0x4ec5c0 = _0x22a198;
-      return this[_0x4ec5c0(0x14a)](_0x4ae9ce, { bloq: !![] });
+    block: async (_0x3f49d5) => {
+      return this["update"](_0x3f49d5, { bloq: !![] });
     },
-    unblock: async (_0x5164e8) => {
-      const _0xb0de54 = _0x22a198;
-      return this[_0xb0de54(0x14a)](_0x5164e8, { bloq: ![] });
+    unblock: async (_0x4666d6) => {
+      const _0x3e5fa7 = _0x55b40d;
+      return this[_0x3e5fa7(0x1ba)](_0x4666d6, { bloq: ![] });
     },
   });
