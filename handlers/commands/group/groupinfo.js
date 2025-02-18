@@ -41,6 +41,7 @@ module.exports = {
   ◦  *${group_db.viewonce ? "[ √ ]" : "[ × ]"}* Antionce
   ◦  *${group_db.antidelete ? "[ √ ]" : "[ × ]"}* Anti Delete
   ◦  *${group_db.games ? "[ √ ]" : "[ × ]"}* Juegos Rpg
+  ◦  *${group_db.raid ? "[ √ ]" : "[ × ]"}* Antiraid
   ◦  *${group_db.welcome.status ? "[ √ ]" : "[ × ]"}* Bienvenida
   ◦  *${group_db.leave.status ? "[ √ ]" : "[ × ]"}* Despedida\n
 *Powered By ${BOT_CONFIG.BOT_NAME}*`;
