@@ -4,7 +4,7 @@ const { milesToComas } = require("../../../utils/index");
 
 module.exports = {
   tags: ["games"],
-  cmd: ["transfer", "trasnferir"],
+  cmd: ["transfer", "transferir"],
   args: ["@user", "monto"],
   help: ["transferir"],
   exec: async (m, Darlyn, { prefix, cmd, args }) => {
