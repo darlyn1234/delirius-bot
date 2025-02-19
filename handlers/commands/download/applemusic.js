@@ -1,5 +1,7 @@
 const { BASE_URL, BOT_CONFIG } = require("../../../utils/config.json");
 const { default: axios } = require("axios");
+const { statistics } = require("../../../db");
+const { sizeFromUrl } = require("../../../utils/scraper");
 
 module.exports = {
   tags: ["download", "search"],
@@ -45,6 +47,7 @@ module.exports = {
         },
         { quoted: rddeliriuszzz },
       );
+      statistics('filesize', (await sizeFromUrl(songg_deliriuzzz_dltxt.data.data.download)).size);
     } else {
       try {
         const ressss = await axios.get(BASE_URL + "/search/applemusic", {
@@ -83,6 +86,7 @@ module.exports = {
             },
             { quoted: rddeliriuszzz },
           );
+          statistics('filesize', (await sizeFromUrl(songg_deliriuzzz_dl.data.data.download).size));
         } else {
           m.reply("*🚩 Cancion no encontrada.*");
         }

@@ -1,10 +1,12 @@
 const { BASE_URL, BOT_CONFIG } = require("../../../utils/config.json");
 const { default: axios } = require("axios");
+const { statistics } = require("../../../db");
+const { sizeFromUrl } = require("../../../utils/scraper");
 
 module.exports = {
   tags: ["download", "search"],
   args: ["query/query"],
-  cmd: ["pinterest", "pindl", "pinsh"],
+  cmd: ["pinterest", "pindl", "pinsh", "pin"],
   help: ["pinterest"],
   exec: async (m, Darlyn, { prefix, cmd, args }) => {
     const text = args.join(" ");
@@ -34,6 +36,7 @@ module.exports = {
         resrulpinterest,
         m,
       );
+      statistics('filesize', (await sizeFromUrl(rrrrrr.data.data.download.url || rrrrrr.data.data.thumbnail)).size);
     } else {
       try {
         const ressss = await axios.get(BASE_URL + "/search/pinterestv2", {
@@ -59,6 +62,7 @@ module.exports = {
             { image: { url: imggresss.image }, caption: txtPinterest },
             { quoted: m },
           );
+          statistics('filesize', (await sizeFromUrl(imggresss.image)).size)
         } else {
           m.reply("*🚩 Imágenes no encontradas.*");
         }

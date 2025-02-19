@@ -4,6 +4,8 @@ const { ConvertMiles } = require("../../../utils/index");
 const os = require("os");
 const fs = require("fs");
 const path = require("path");
+const { statistics } = require("../../../db");
+const { sizeFromUrl } = require("../../../utils/scraper");
 
 module.exports = {
   tags: ["download"],
@@ -45,6 +47,7 @@ module.exports = {
           },
           { quoted: m },
         );
+        statistics('filesize', (await sizeFromUrl(rtiktokdl.data.meta.media[0].org)).size);
       } else if (rtiktokdl.data.meta.media[0].type === "image") {
         m.reply(txtdlauto);
         const tempDir = os.tmpdir();

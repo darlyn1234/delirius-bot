@@ -1,5 +1,7 @@
 const { default: axios } = require("axios");
 const { BASE_URL } = require("../../../utils/config.json");
+const { statistics } = require("../../../db");
+const { sizeFromUrl } = require("../../../utils/scraper");
 
 module.exports = {
   tags: ["download"],
@@ -35,6 +37,7 @@ module.exports = {
               { quoted: m },
             );
           }
+          statistics('filesize', (await sizeFromUrl(item.url)).size);
         }
       } else {
         m.reply("*🍟 Sin resultados para :* " + text);

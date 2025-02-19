@@ -1,6 +1,7 @@
 const { default: axios } = require("axios");
 const { load } = require("../node_modules/cheerio");
 const { BASE_URL } = require("../utils/config.json");
+const { humanFileSize } = require("../utils");
 
 class Scraper {
   static baseURL = BASE_URL;
@@ -13,6 +14,15 @@ class Scraper {
   static http = axios.create({
     baseURL: BASE_URL,
   });
+
+  static isUrl = (url) => {
+    return url.match(
+      new RegExp(
+        /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/,
+        "gi",
+      ),
+    );
+  };
 
   static unsplash = async (query) => {
     const res = await this.http.get("/search/unsplash", {
@@ -80,6 +90,7 @@ class Scraper {
         .catch((error) => reject(new Error(error).message));
     });
   };
+
   static soundcloud = (query) => {
     return new Promise(async (resolve, reject) => {
       try {
@@ -121,6 +132,67 @@ class Scraper {
         });
       } catch (error) {
         reject({ creator: "darlingg", status: false, msg: error.message });
+      }
+    });
+  };
+
+  static getAdmins = async (participants) => {
+    let admin = [];
+    for (const i of participants) {
+      i.admin === "superadmin"
+        ? admin.push(i.id)
+        : i.admin === "admin"
+          ? admin.push(i.id)
+          : "";
+    }
+    return admin || [];
+  };
+
+  /**
+   * 
+   * @typedef {Object} ISizeFromUrl
+   * @property {string} creator creator name
+   * @property {boolean} status status
+   * @property {number} size size file url
+   * @property {string} size_format size formated
+   */
+
+  /**
+   * 
+   * @param {string} url
+   * @returns {Promise<ISizeFromUrl>}
+   */
+  static sizeFromUrl = async (url) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        if (!this.isUrl(url)) {
+          return reject({
+            creator: "darlingg",
+            status: false,
+            msg: "Invalid URL",
+          });
+        }
+        const res = await axios.head(url);
+        const size = res.headers["content-length"];
+        if (!size) {
+          return reject({
+            creator: "darlingg",
+            status: false,
+            msg: "Size not found",
+          });
+        }
+        resolve({
+          creator: "darlingg",
+          status: true,
+          size: Number(size),
+          size_format: humanFileSize(size, true, 2),
+        });
+      } catch (error) {
+        reject({
+          creator: "darlingg",
+          status: false,
+          msg: error.message || new Error(error).message || error.toString() || String(error),
+        });
       }
     });
   };

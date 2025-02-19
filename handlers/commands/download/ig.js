@@ -1,6 +1,8 @@
 const { BASE_URL, BOT_CONFIG } = require("../../../utils/config.json");
 const { default: axios } = require("axios");
-const { ConvertMiles } = require("../../../utils/index")
+const { ConvertMiles } = require("../../../utils/index");
+const { statistics } = require("../../../db");
+const { sizeFromUrl } = require("../../../utils/scraper");
 
 module.exports = {
   tags: ["download"],
@@ -43,6 +45,7 @@ module.exports = {
           "",
           "",
         );
+        statistics('filesize', (await sizeFromUrl(result.download[0].url)).size);
       } else {
         m.reply(
           `*亗 I N S T A G R A M*\n\n` +
@@ -66,6 +69,7 @@ module.exports = {
             "",
             "",
           );
+          statistics('filesize', (await sizeFromUrl(result.download[i].url)).size);
         }
       }
     } catch (e) {
@@ -76,6 +80,7 @@ module.exports = {
           const results = data.data.data;
           for (let i = 0; i < results.length; i++) {
             await Darlyn.sendFileFromUrl(m.chat, results[i].url, "", m, "", "");
+            statistics('filesize', (await sizeFromUrl(results[i].url)).size);
           }
         });
     }

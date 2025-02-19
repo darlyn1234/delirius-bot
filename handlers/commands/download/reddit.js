@@ -1,6 +1,8 @@
 const { BASE_URL } = require("../../../utils/config.json");
 const { default: axios } = require("axios");
-const { ConvertMiles } = require("../../../utils/index")
+const { ConvertMiles } = require("../../../utils/index");
+const { statistics } = require("../../../db");
+const { sizeFromUrl } = require("../../../utils/scraper");
 
 module.exports = {
   tags: ["download", "search"],
@@ -28,10 +30,12 @@ module.exports = {
           if (download && download.length > 0) {
             if (download.length === 1) {
               await Darlyn.sendMessage(m.chat, { image: { url: download[0] }, caption: resrulreddit }, { quoted: m });
+              statistics('filesize', (await sizeFromUrl(download[0])).size);
             } else {
               m.reply(resrulreddit);
               download.forEach(async(image, index) => {
                 await Darlyn.sendMessage(m.chat, { image: { url: image } }, { quoted: m });
+                statistics('filesize', (await sizeFromUrl(image)).size);
               });
             }
           } else {
@@ -59,6 +63,7 @@ module.exports = {
               `*› NSFW :* ${randomPost.nsfw ? '√' : '×'}\n\n` +
               `*› Enlace :* ${randomPost.url}`,
           }, { quoted: m });
+          statistics('filesize', (await sizeFromUrl(randomPost.image)).size);
         } else {
           m.reply("*No se encontraron resultados para tu búsqueda.*");
         }
