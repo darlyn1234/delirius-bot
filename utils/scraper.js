@@ -196,6 +196,18 @@ class Scraper {
       }
     });
   };
+
+  static marin_kitagawa = async () => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const res = await this.http.get("/anime/marin_kitagawa");
+       resolve(res.data);
+      } catch (er) {
+        reject(new Error(er).message);
+      }
+    })
+  }
+  
 }
 
 module.exports = Scraper;

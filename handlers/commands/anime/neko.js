@@ -2,7 +2,7 @@ const { default: axios } = require("axios");
 const { BOT_CONFIG } = require("../../../utils/config.json");
 
 module.exports = {
-  tags: ["tools"],
+  tags: ["anime"],
   cmd: ["neko"],
   help: ["neko"],
   exec: async (m, Darlyn) => {
