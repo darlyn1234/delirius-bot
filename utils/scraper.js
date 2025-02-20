@@ -149,7 +149,7 @@ class Scraper {
   };
 
   /**
-   * 
+   *
    * @typedef {Object} ISizeFromUrl
    * @property {string} creator creator name
    * @property {boolean} status status
@@ -158,7 +158,7 @@ class Scraper {
    */
 
   /**
-   * 
+   *
    * @param {string} url
    * @returns {Promise<ISizeFromUrl>}
    */
@@ -191,7 +191,11 @@ class Scraper {
         reject({
           creator: "darlingg",
           status: false,
-          msg: error.message || new Error(error).message || error.toString() || String(error),
+          msg:
+            error.message ||
+            new Error(error).message ||
+            error.toString() ||
+            String(error),
         });
       }
     });
@@ -201,13 +205,12 @@ class Scraper {
     return new Promise(async (resolve, reject) => {
       try {
         const res = await this.http.get("/anime/marin_kitagawa");
-       resolve(res.data);
+        resolve(res.data);
       } catch (er) {
         reject(new Error(er).message);
       }
-    })
-  }
-  
+    });
+  };
 }
 
 module.exports = Scraper;
