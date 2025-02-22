@@ -35,6 +35,7 @@ module.exports = {
 
 	╭  ✦ User Status ✦  ╮
 
+ *◦ Registrado :* ${userr.register ? "√" : "×"}
  *◦ Bloqueado :* ${blocked ? "√" : "×"}
  *◦ Baneado :* ${userr.banned ? "√" : "×"}
  *◦ Warning :* ${userr.warning ? "√" : "×"}\n
